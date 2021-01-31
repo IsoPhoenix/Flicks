@@ -3,3 +3,6 @@ A webapp that provides personalized movie recommendations for groups. Developed 
 
 The Figma prototype for the webapp can be found here: 
 https://www.figma.com/file/6me1QoYVXqL6b8iuSxtdnu/Flix?node-id=0%3A1
+
+The original project repo with all collaborators can be found here:
+https://github.com/Dylan-Watson/Flicks
