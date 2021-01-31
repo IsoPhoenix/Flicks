@@ -1,0 +1,21 @@
+{% extends "index.html" %} 
+
+{% block bodycss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gjoin.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="text-center row h-100">
+    <div class="col my-auto" style="padding-top: 20%">
+        <h2>Join a group!</h2>
+        <form>
+            <div class="form-group">
+                <input class="form-control form-control-lg mx-auto text-center" type="text" maxlength="4" placeholder="4-digit code" id="code-input" style="width: 200px">
+            </div>
+            <p class="text-danger" style="display: none;" id="error-msg">Not a valid code!</p>
+            <button class="btn btn-primary" id="sub" type="button">Submit</button>
+        </form>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/gjoin.js') }}"></script>
+{% endblock %}

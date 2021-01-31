@@ -1,0 +1,23 @@
+{% extends "index.html" %} 
+
+{% block bodycss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/gcreate.css') }}" >
+<meta code="{{code}}" person="{{person}}" id="code-meta">
+{% endblock %}
+
+{% block body %}
+<div class="text-center">
+
+<h2>Group Flix Code</h2>
+<h1 id="code" style="font-size:1000%">{{code}}</h1>
+
+<button type="button" href="/results?code={{code}}" class="btn btn-primary mb-3">Find a Flick!</button>
+
+<h2>People</h2>
+    
+<ul class="list-group" style="overflow:scroll; max-height: 300px;" id="people">
+        <li class="list-group-item">{{person}}</li>
+    </ul>
+</div>
+<script src="{{ url_for('static', filename='js/gcreate.js') }}"></script>
+{% endblock %}

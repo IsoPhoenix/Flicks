@@ -1,0 +1,67 @@
+{% extends "index.html" %} 
+
+{% block bodycss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/searchresults.css') }}" 
+{% endblock %}
+
+{% block body %}
+<div style="margin-top: 5%;">
+<h3 class="text-center">Search for movies you've enjoyed to add them to your favorites list!</h3>
+
+<form id="searchform" class="form-inline d-flex justify-content-center md-form form-sm mt-0 mx-auto" style="padding-top: 10px; width:500px">
+    <i class="fas fa-search" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search movies by title"
+      aria-label="Search">
+  </form>
+</div>
+<ul class="list-group" style="padding-top:20px; overflow:scroll; max-height: 500px;">
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-4" style="display:flex; align-items:center;">
+                <b>The Dark Knight</b>
+            </div>
+            <div class="col-4" style="display:flex; align-items:center">
+                Christopher Nolan
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                2008
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                <button type="button" class="btn btn-outline-success float-right btn-sm">Add to favorites</button>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-4" style="display:flex; align-items:center;">
+                <b>The Dark Knight Rises</b>
+            </div>
+            <div class="col-4" style="display:flex; align-items:center">
+                Christopher Nolan
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                2012
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                <button type="button" class="btn btn-outline-success float-right btn-sm">Add to favorites</button>
+            </div>
+        </div>
+    </li>
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-4" style="display:flex; align-items:center;">
+                <b>Avatar: The Last Airbender</b>
+            </div>
+            <div class="col-4" style="display:flex; align-items:center">
+                M. Night Shyamalan
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                2010
+            </div>
+            <div class="col-2" style="display:flex; align-items:center;">
+                <button type="button" class="btn btn-outline-success float-right btn-sm">Add to favorites</button>
+            </div>
+        </div>
+    </li>
+</ul>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "index.html" %} 
+
+{% block bodycss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/results.css') }}"> 
+{% endblock %} 
+
+{% block body%} 
+<div class="row">      <!-- style = "margin: 0 auto" -->
+    <div class="col-4">
+        <div class="row mb-3">
+            <h1 class="fixedcol1" style="font-size:400%">Results!</h1>
+            <p class="fixedcol2">
+                Enjoy your movie? Make sure to give it<br>a like to add it to your history!
+            </p>
+        </div>
+    </div>
+    
+    <div class="col-8">
+        {% for movie in top3 %}
+            <div class="row mb-3">
+                <div class="card" style="width: 20rem; box-shadow: 2px 2px 5px #8F8F8F;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{movie["primary_title"]}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{movie["start_year"]}}</h6>
+                        <a href="https://www.imdb.com/title/{{movie['id']}}/" class="card-link">IMDB</a>
+                    </div>  
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- <div class="row mb-3">
+                    <img class="mr-3" width="300" src="https://m.media-amazon.com/images/M/MV5BMTQzMTcwMzgyMV5BMl5BanBnXkFtZTgwMzAyMzQ2MzE@._V1_UY1200_CR90,0,630,1200_AL_.jpg" alt="test">
+                <div class="card" style="width: 20rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">The Interview</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">2014</h6>
+                    <p class="card-text">Dave Skylark and his producer Aaron Rapaport run the celebrity tabloid show "Skylark Tonight". When they land an interview with a surprise fan, North Korean dictator Kim Jong-un, they are recruited by the CIA to assassinate him.</p>
+                    <a href="https://www.imdb.com/title/tt2788710/" class="card-link">IMDB</a>
+                    <a href="#" class="card-link">Like</a>
+                    </div>  
+                </div>
+            </div> -->

@@ -1,0 +1,45 @@
+{% extends "index.html" %} 
+
+{% block bodycss %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}" 
+{% endblock %}
+
+{% block body %}
+<div class="row h-100">
+    <div class="col-6 my-auto"> 
+        <h1 style="font-size:500%;">Welcome,<br>{{username}}!</h1>
+        <form style="padding-top:30px">
+            <!-- <div class="form-group">
+                <input type="name" class="form-control" placeholder="Name">
+            </div> -->
+            <div class="form-group">
+                <label>Username</label>
+                <input class="form-control" type="text" placeholder="{{username}}" value="{{username}}" readonly>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input class="form-control" type="password" placeholder="Password" value="PASSWORDHERE" readonly>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary">Change username</button>
+                <button type="button" class="btn btn-secondary">Change password</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-6 my-auto text-center">
+        <h1>My Flix</h1>
+        <ul class="list-group" style="overflow:scroll; max-height: 500px;">
+            <li class="list-group-item">
+                <div class="row"style="padding-right:20px;">
+                    <div class="col-10" style="display:flex; align-items:center;">
+                        Avengers Endgame <!-- Populate This -->
+                    </div>
+                    <div class="col-2" style="display:flex; align-items:center;">
+                        <button type="button" class="btn btn-outline-danger float-right btn-sm">Remove</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
